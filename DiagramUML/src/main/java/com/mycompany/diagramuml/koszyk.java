@@ -71,6 +71,11 @@ DefaultListModel list3 = new DefaultListModel();
         });
 
         jButton2.setText("Usun");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nazwa");
 
@@ -245,15 +250,13 @@ DefaultListModel list3 = new DefaultListModel();
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
-     /*   jTextField1.setText((jList3.getModel().getElementAt(1))*(jList2.getModel().getElementAt(1)));
-        jTextField2.setText((jList3.getModel().getElementAt(2))*(jList2.getModel().getElementAt(2)));
-        jTextField3.setText((jList3.getModel().getElementAt(3))*(jList2.getModel().getElementAt(3)));
-        jTextField4.setText((jList3.getModel().getElementAt(4))*(jList2.getModel().getElementAt(4)));
-        jTextField5.setText((jList3.getModel().getElementAt(5))*(jList2.getModel().getElementAt(5)));
+        jTextField1.setText((jList2.getModel().getElementAt(0))*(jList3.getModel().getElementAt(0)));
+        jTextField2.setText((jList3.getModel().getElementAt(1))*(jList2.getModel().getElementAt(1)));
+        jTextField3.setText((jList3.getModel().getElementAt(2))*(jList2.getModel().getElementAt(2)));
+        jTextField4.setText((jList3.getModel().getElementAt(3))*(jList2.getModel().getElementAt(3)));
+        jTextField5.setText((jList3.getModel().getElementAt(4))*(jList2.getModel().getElementAt(4)));
         int finalnacena = Integer.parseInt(jTextField1.getText())+Integer.parseInt(jTextField2.getText())+Integer.parseInt(jTextField3.getText())+Integer.parseInt(jTextField4.getText())+Integer.parseInt(jTextField5.getText());
         jTextField6.setText(finalnacena);
-        */
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -267,6 +270,13 @@ DefaultListModel list3 = new DefaultListModel();
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+           list1.removeElementAt(0);
+           list2.removeElementAt(0);
+           list3.removeElementAt(0);
+   rewrite();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
