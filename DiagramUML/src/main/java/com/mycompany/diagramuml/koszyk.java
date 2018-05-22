@@ -250,11 +250,12 @@ DefaultListModel list3 = new DefaultListModel();
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jTextField1.setText((jList2.getModel().getElementAt(0))*(jList3.getModel().getElementAt(0)));
-        jTextField2.setText((jList3.getModel().getElementAt(1))*(jList2.getModel().getElementAt(1)));
-        jTextField3.setText((jList3.getModel().getElementAt(2))*(jList2.getModel().getElementAt(2)));
-        jTextField4.setText((jList3.getModel().getElementAt(3))*(jList2.getModel().getElementAt(3)));
-        jTextField5.setText((jList3.getModel().getElementAt(4))*(jList2.getModel().getElementAt(4)));
+       
+        jTextField1.setText(Integer.parseInt(jList2.getModel().getElementAt(0))*Integer.parseInt(jList3.getModel().getElementAt(0)));
+        jTextField2.setText(Integer.parseInt(jList3.getModel().getElementAt(1))*Integer.parseInt(jList2.getModel().getElementAt(1)));
+        jTextField3.setText(Integer.parseInt(jList3.getModel().getElementAt(2))*Integer.parseInt(jList2.getModel().getElementAt(2)));
+        jTextField4.setText(Integer.parseInt(jList3.getModel().getElementAt(3))*Integer.parseInt(jList2.getModel().getElementAt(3)));
+        jTextField5.setText(Integer.parseInt(jList3.getModel().getElementAt(4))*Integer.parseInt(jList2.getModel().getElementAt(4)));
         int finalnacena = Integer.parseInt(jTextField1.getText())+Integer.parseInt(jTextField2.getText())+Integer.parseInt(jTextField3.getText())+Integer.parseInt(jTextField4.getText())+Integer.parseInt(jTextField5.getText());
         jTextField6.setText(finalnacena);
     }//GEN-LAST:event_jButton3ActionPerformed
