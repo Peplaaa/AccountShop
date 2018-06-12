@@ -1,4 +1,4 @@
-    /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -7,17 +7,19 @@ package com.mycompany.diagramuml;
 
 /**
  *
- * @author 165NCIPEPLINSKIK
+ * @author Kamil
  */
-public class shoppingCart {
-    public float totalMoney;
-    public float vatAmount;
+public class payment {
     
-    public void addToCart() {
+    public String id;
+    public String datePaid;
+    public String details;
+    
+    public void approved(){
         
     }
     
-    public void showTotalPrice() {
-       
+    public void disapproved(){
+        
     }
 }
