@@ -27,17 +27,45 @@ public class DatabaseTest {
     Database database;
     
     @Test
-    public void test_data_from_db(){
+    public void test_name_account1(){
         when(database.getData()).thenReturn(Collections.singletonList("Steam"));
         List<String> data = database.getData();
         Assert.assertSame("Steam", data.get(0));
     }
     
+     @Test
+    public void test_name_account2(){
+        when(database.getData()).thenReturn(Collections.singletonList("Origin"));
+        List<String> data = database.getData();
+        Assert.assertSame("Origin", data.get(0));
+    }
+    
+     @Test
+    public void test_name_account3(){
+        when(database.getData()).thenReturn(Collections.singletonList("Gameforge"));
+        List<String> data = database.getData();
+        Assert.assertSame("Gameforge", data.get(0));
+    }
+    
     @Test
-    public void test_data_from_db2(){
+    public void test_fail_name_account1(){
         when(database.getData()).thenReturn(Collections.singletonList("Steam"));
         List<String> data = database.getData();
         Assert.assertNotSame("Account", data.get(0));
+    }
+    
+    @Test
+    public void test_fail_name_account2(){
+        when(database.getData()).thenReturn(Collections.singletonList("Origin"));
+        List<String> data = database.getData();
+        Assert.assertNotSame("Account", data.get(0));
+    }
+    
+    @Test
+    public void test_fail_name_account3(){
+        when(database.getData()).thenReturn(Collections.singletonList("Gameforge"));
+        List<String> data = database.getData();
+        Assert.assertNotSame("Steam", data.get(0));
     }
     
 }

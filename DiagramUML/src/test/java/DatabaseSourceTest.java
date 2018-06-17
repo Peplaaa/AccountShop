@@ -30,10 +30,26 @@ public class DatabaseSourceTest {
     Source source;
     
     @Test
-    public void test_data_source(){
+    public void test_price_account1(){
         when(source.getPrice()).thenReturn(20);
         Assert.assertSame(20, database.getSource().getPrice());
-        Mockito.timeout(0);
     }
     
+     @Test
+    public void test_price_account2(){
+        when(source.getPrice()).thenReturn(50);
+        Assert.assertSame(50, database.getSource().getPrice());
+    }
+    
+     @Test
+    public void test_fail_price_account1(){
+        when(source.getPrice()).thenReturn(100);
+        Assert.assertNotSame(10, database.getSource().getPrice());
+    }
+    
+      @Test
+    public void test_fail_price_account2(){
+        when(source.getPrice()).thenReturn(250);
+        Assert.assertNotSame(500, database.getSource().getPrice());
+    }
 }
